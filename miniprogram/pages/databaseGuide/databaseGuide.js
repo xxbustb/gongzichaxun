@@ -91,6 +91,7 @@ Page({
   onCounterDec: function() {
      const db = wx.cloud.database()
      const newCount = this.data.count - 1
+     console.log(this.data.counterId)
      db.collection('counters').doc(this.data.counterId).update({
        data: {
          count: newCount
