@@ -2,7 +2,6 @@
 var util = require('../utils/util');
 Page({
   data: {
- 
   },
   onLoad: function () {
     // 调用函数时，传入new Date()参数，返回值是日期和时间
@@ -21,12 +20,10 @@ Page({
       date: e.detail.value,
     })
   },
-  bindDateChange2(e) {
-    let that = this;
-    that.setData({
-      date2: e.detail.value,
-    })
-
+  query: function () {
+  wx.navigateTo({
+    url: '../../pages/result/result', //要跳转到的页面路径
+})
   }
 }
 )
