@@ -12,7 +12,7 @@ page{
  } 
   
  /*登录图片*/
- .login-icon{ 
+ .login-icon{  
   flex: 1; 
  } 
   
@@ -36,15 +36,15 @@ page{
   
  /*输入框*/
  .nameImage, .keyImage { 
-  margin-left: 22px; 
+  margin-left: 10px;
   width: 18px; 
   height: 16px
  } 
   
  .loginLab { 
-  margin: 15px 15px 15px 10px; 
-  color: #545454; 
-  font-size: 14px
+  margin:15px 15px 15px 5px;
+  color: #181717; 
+  font-size: 18px
  } 
   
  .inputText { 
@@ -53,11 +53,11 @@ page{
   text-align: right; 
   margin-right: 22px; 
   margin-top: 11px;
-  color: #cccccc; 
-  font-size: 14px
+  color: #181717; 
+  font-size: 16px
  } 
  .line { 
-  margin-top: 8px; 
+  margin-top: 15px; 
  } 
   
  /* .line { 

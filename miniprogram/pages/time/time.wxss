@@ -1,23 +1,42 @@
 /* 日期选择 */
-.picker_group {
-  height: 85rpx;
-  line-height: 85rpx;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  font-size: 30rpx;
-  color: #888;
-  border-bottom: 1rpx solid #efefef;
-
+page {
+  height:100%; 
 }
-
-.picker_group picker {
-  /* background-color: yellow; */
-  color: #64bff1;
-  height: 55rpx;
-  line-height: 55rpx;
-  margin: 0 2%;
-  padding: 0 2%;
-  border: 1rpx solid #64bff1;
-  border-radius: 30rpx;
+.page {
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  padding: 0; 
+  box-sizing: border-box;       
+  /*justify-content: center;*/
+  align-items:center;
 }
+.timeLab {
+  margin-top: 200rpx;
+  color: #000000; 
+  font-size: 20px
+ } 
+.picker {
+  margin-top: 80rpx;
+  color: #545454;
+  font-size: 20px
+}
+ .line { 
+  width: 40%; 
+  height: 3rpx; 
+  background-color: #cccccc; 
+  margin-top: 10rpx; 
+ } 
+ .loginBtnView { 
+  width: 100%; 
+  height: auto; 
+  /* background-color:#DCDCDC;  */
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  padding-bottom: 0px; 
+ } 
+ .loginBtn { 
+  width: 90%; 
+  margin-top: 80rpx; 
+  border-radius:10px;
+ }

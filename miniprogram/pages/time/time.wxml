@@ -1,16 +1,16 @@
 <view class="page">  
-   <!-- 时间段 -->  
-    <view class="picker_group">  
-      <picker mode="date" value="{{date}}"  end="{{date2}}" bindchange="bindDateChange">  
-        <view class="picker">  
-          {{date}}  
-        </view>  
-      </picker>  
-      至  
-      <picker mode="date" value="{{date2}}" start="{{date}}" end="2020-01-01" bindchange="bindDateChange2">  
-        <view class="picker">  
-          {{date2}}  
-        </view>  
-      </picker>        
-    </view>  
-  </view>  
+ <!-- 选择日期 -->  
+ <label class="timeLab">请选择要查询的月份</label>
+ <picker mode="date" start="2000-01" end="{{time}}" fields="month" bindchange="bindDateChange">
+   <view class="picker">{{time}}</view>
+ </picker> 
+ <view class="line"></view> 
+ <view class="loginBtnView"> 
+   <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">查询</button> 
+ </view> 
+ </view> 
+
+
+
+
+ 
