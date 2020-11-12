@@ -20,7 +20,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "工资查询",
+    "navigationBarTitleText": "北方导航工资查询",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

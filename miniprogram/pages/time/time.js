@@ -1,10 +1,16 @@
 //const util = require('../../utils/util.js')
-
+var util = require('../utils/util');
 Page({
   data: {
-    date: '2018-01-01',//默认起始时间  
-    date2: '2018-01-24',//默认结束时间 
-
+ 
+  },
+  onLoad: function () {
+    // 调用函数时，传入new Date()参数，返回值是日期和时间
+    var time = util.formatTime(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据
+    this.setData({
+      time: time
+    });
   },
 
   // 时间段选择  
