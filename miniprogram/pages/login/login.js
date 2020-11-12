@@ -92,10 +92,16 @@ Page({
     ).get({
       success: function(res) {
         // res.data 包含该记录的数据
-        console.log(res.data[0])
+        console.log(res.data.length)
+        if(res.data.length==0){
+          wx.showToast({
+            icon: 'none',
+            title: '账号错误'
+          })
+        }
         if(res.data[0].password==password){
           wx.navigateTo({
-            url: '../../pages/time/time',//要跳转到的页面路径
+            url: '../../pages/time/time?IDnum='+name,//要跳转到的页面路径
     })
         }else{
           wx.showToast({
@@ -103,12 +109,11 @@ Page({
             title: '密码错误'
           })
         }
-      },fail: err => {
+      },fail: function(){
         wx.showToast({
           icon: 'none',
           title: '账号错误'
         })
-        console.error('[数据库] [查询记录] 失败：', err)
       }
     })
     
