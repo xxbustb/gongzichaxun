@@ -10,6 +10,7 @@ Page({
     openid: '',
     count: null,
     queryResult: '',
+    gongzi:''
   },
 
   onLoad: function (options) {
@@ -24,13 +25,15 @@ Page({
      const db = wx.cloud.database()
      db.collection('counters').add({
        data: {
-         count: 1
+         count: 1,
+         gongzi:15000
        },
        success: res => {
          // 在返回结果中会包含新创建的记录的 _id
          this.setData({
-           counterId: res._id,
-           count: 1
+           counterId: '555555',
+           count: 1,
+            gongzi:15000
          })
          wx.showToast({
            title: '新增记录成功',
@@ -50,14 +53,16 @@ Page({
   onQuery: function() {
      const db = wx.cloud.database()
      // 查询当前用户所有的 counters
-     db.collection('counters').where({
-       _openid: '111111'
-     }).get({
+     db.collection('counters').where(
+       {
+         gongzi:'13333'
+       }
+     ).get({
        success: res => {
          this.setData({
            queryResult: JSON.stringify(res.data, null, 2)
          })
-         console.log('[数据库] [查询记录] 成功: ', res)
+         console.log('[数据库] [查询记录] 成功: ', res[0])
        },
        fail: err => {
          wx.showToast({
@@ -190,5 +195,6 @@ Page({
       })
     }
   }
+ 
 
 })

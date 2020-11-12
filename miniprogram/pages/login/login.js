@@ -79,9 +79,40 @@ Page({
   }
   */
   login: function (options) {
-    wx.navigateTo({
-          url: '../../pages/time/time',//要跳转到的页面路径
- })  
+    const db = wx.cloud.database()
+    console.log(this.data.username)
+    console.log(this.data.password)
+    var name=this.data.username
+    var password=this.data.password
+     // 查询当前用户所有的 counters
+    const result=db.collection('usernameAndPassword').where(
+      {
+        IDnum:name
+      }
+    ).get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log(res.data[0])
+        if(res.data[0].password==password){
+          wx.navigateTo({
+            url: '../../pages/time/time',//要跳转到的页面路径
+    })
+        }else{
+          wx.showToast({
+            icon: 'none',
+            title: '密码错误'
+          })
+        }
+      },fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '账号错误'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+    
+      
  }
 })
  
