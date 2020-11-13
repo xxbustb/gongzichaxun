@@ -2,7 +2,9 @@
 var util = require('../utils/util');
 Page({
   data: {
-      IDnum:''
+      date:util.formatTime(new Date()),
+      IDnum:'',
+      time:''
   },
   onLoad: function (option) {
     // 调用函数时，传入new Date()参数，返回值是日期和时间
@@ -12,23 +14,22 @@ Page({
       time: time
     });
     this.data.IDnum=option.IDnum
-    console.log(option.IDnum)
+    
   },
   
   // 时间段选择  
   bindDateChange(e) {
     let that = this;
-    console.log(e.detail.value)
+    
     that.setData({
       date: e.detail.value,
     })
+    this.data.time=e.detail.value
   },
-  bindDateChange2(e) {
-    let that = this;
-    that.setData({
-      date2: e.detail.value,
-    })
-
+  query: function () {
+    wx.navigateTo({
+    url: '../../pages/result/result?IDnum='+this.data.IDnum+'&time='+this.data.time, //要跳转到的页面路径
+})
   }
 }
 )

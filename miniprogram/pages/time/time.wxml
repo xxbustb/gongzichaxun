@@ -6,7 +6,7 @@
  </picker> 
  <view class="line"></view> 
  <view class="loginBtnView"> 
-   <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">查询</button> 
+   <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="query">查询</button> 
  </view> 
  </view> 
 
