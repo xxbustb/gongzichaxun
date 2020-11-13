@@ -1,1 +1,50 @@
-/* pages/result/result.wxss */
+page{
+  height: 100%;    /* 使用page的height可以使页面占全屏 */
+  background-color: #fafafa;
+ }
+.result-container{
+  padding: 0 5%;
+  height: 100%;
+}
+.result-box1, .result-box2, .result-box3{
+  margin-top: 1%;
+  padding: 5% 5%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px #888888;
+}
+.resultlab{
+  font-size: 18px;
+  font-weight: bold;
+}
+.text2{
+  float: right; 
+  text-align: right; 
+  font-size: 14px;
+  color: #8d8787; 
+}
+.result-box1>text{
+  font-size: 14px;
+  color: #000000; 
+}
+.result-box2>text{
+  display: block;
+  font-size: 12px;
+  text-align: center;  
+  color: #6e6767;
+}
+.money{
+  font-size: 26px;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-weight: bold;
+  color: #e24949; 
+}
+.result-box3>view{
+  margin-top: 2%;
+}
+.result-box3>text{
+  font-size: 14px;
+  color: #000000; 
+} 
