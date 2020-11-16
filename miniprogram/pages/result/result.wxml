@@ -1,2 +1,44 @@
-<!--pages/result/result.wxml-->
-<text>pages/result/result.wxml</text>
+<view class="result-container">
+  <view class="result-box1">
+    <label class="resultlab">基本信息</label>
+    <view><text>姓名 </text> <text class="text2">{{username}} </text> </view>   
+    <view><text>部门名称 </text> <text class="text2">{{department}} </text> </view>
+    <view><text>岗位名称 </text> <text class="text2">{{post}} </text> </view>
+    <view><text>银行账号 </text> <text class="text2">{{account}} </text> </view>
+  </view>
+  <view class="result-box2">
+    <view class="money">{{after_tax}}</view>
+    <text>实发工资(元) {{time}}</text>
+  </view>
+  <view class="result-box3">
+    <label class="resultlab">工资明细</label>
+    <view><text>岗位工资 </text> <text class="text2">{{post_wage}} </text></view>
+    <view><text>保密津贴 </text> <text class="text2">{{secrecy}} </text></view>
+    <view><text>提租补贴 </text> <text class="text2">{{rate}} </text></view>
+    <view><text>调整项 </text> <text class="text2">{{adjustment}} </text></view>
+    <view><text>专项奖励 </text> <text class="text2">{{award}} </text></view>
+    <view><text>绩效工资 </text> <text class="text2">{{performance_wage}} </text></view>
+    <view><text>出车值班 </text> <text class="text2">{{duty}} </text></view>
+    <view><text>津贴 </text> <text class="text2">{{subsidy}} </text></view>
+    <view><text>托补 </text> <text class="text2">{{nursery}} </text></view>
+    <view><text>过节费 </text> <text class="text2">{{festival}} </text></view>
+    <view><text>交通补贴 </text> <text class="text2">{{traffic}} </text></view>
+    <view><text>学历职称 </text> <text class="text2">{{degree}} </text></view>
+    <view><text>年功工资 </text> <text class="text2">{{age_wage}} </text></view>
+    <view><text>生育津贴 </text> <text class="text2">{{maternity}} </text></view>
+    <view><text>独生子女 </text> <text class="text2">{{one_child}} </text></view>
+    <view><text>住房补贴 </text> <text class="text2">{{housing}} </text></view>
+    <view><text>应发工资 </text> <text class="text2">{{before_tax}} </text></view>
+    <view><text>养老保险 </text> <text class="text2">{{endowment_insurance}} </text></view>
+    <view><text>医疗保险 </text> <text class="text2">{{medical_insurance}} </text></view>
+    <view><text>公积金 </text> <text class="text2">{{accumulation_fund}} </text></view>
+    <view><text>失业保险 </text> <text class="text2">{{unemployment_insurance}} </text></view>
+    <view><text>房租水电 </text> <text class="text2">{{tenement}} </text></view>
+    <view><text>个人税款 </text> <text class="text2">{{personal_tax}} </text></view>
+    <view><text>补扣保险 </text> <text class="text2">{{adding_insurance}} </text></view>
+    <view><text>大额医疗 </text> <text class="text2">{{large_medical}} </text></view>
+    <view><text>宿舍房租 </text> <text class="text2">{{dormitory}} </text></view>
+    <view><text>企业年金 </text> <text class="text2">{{supplementary_pension}} </text></view>
+    <view><text>实发工资 </text> <text class="text2">{{after_tax}} </text></view>
+  </view>
+</view>

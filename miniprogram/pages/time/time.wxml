@@ -2,7 +2,7 @@
  <!-- 选择日期 -->  
  <label class="timeLab">请选择要查询的月份</label>
  <picker mode="date" start="2000-01" end="{{time}}" fields="month" bindchange="bindDateChange">
-   <view class="picker">{{time}}</view>
+   <view class="picker">{{date}}</view>
  </picker> 
  <view class="line"></view> 
  <view class="loginBtnView"> 
