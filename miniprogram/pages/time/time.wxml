@@ -1,4 +1,4 @@
-<view class="page">  
+<view class="time-container">  
  <!-- 选择日期 -->  
  <label class="timeLab">请选择要查询的月份</label>
  <picker mode="date" start="2000-01" end="{{time}}" fields="month" bindchange="bindDateChange">
@@ -7,6 +7,7 @@
  <view class="line"></view> 
  <view class="loginBtnView"> 
    <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="query">查询</button> 
+   <loading hidden="{{hiddenLoading}}">加载中... </loading>
  </view> 
  </view> 
 

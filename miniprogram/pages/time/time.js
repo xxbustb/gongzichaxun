@@ -4,7 +4,8 @@ Page({
   data: {
       date:util.formatTime(new Date()),
       IDnum:'',
-      time:''
+      time:'',
+      hiddenLoading: true
   },
   onLoad: function (option) {
     // 调用函数时，传入new Date()参数，返回值是日期和时间
@@ -29,10 +30,12 @@ Page({
   query: function () {
     var IDnum=this.data.IDnum
     var time=this.data.time
+    var hiddenLoading=this.data.hiddenLoading
+    var that=this
     const db = wx.cloud.database()
-    const result=db.collection(this.data.time).where(
+    const result=db.collection(time).where(
       {
-        IDnum:"'"+this.data.IDnum
+        IDnum:"'"+IDnum
       }
     ).get(
       {
@@ -42,11 +45,14 @@ Page({
                 icon: 'none',
                 title: '无记录'
               })
-            }else{console.log(1111)
-              wx.navigateTo({
+            }else{ 
+            that.setData({
+              hiddenLoading:!hiddenLoading
+            })
+            wx.navigateTo({
                 url: '../../pages/result/result?IDnum='+IDnum+'&time='+time, //要跳转到的页面路径
             })
-            }
+          }
         },fail: function(){
           wx.showToast({
             icon: 'none',
@@ -55,8 +61,12 @@ Page({
         }
       }
     )
-    
-    
+  },
+  onShow: function () {
+    let that = this;
+    that.setData({
+      hiddenLoading:true
+    })
   }
 }
 )
