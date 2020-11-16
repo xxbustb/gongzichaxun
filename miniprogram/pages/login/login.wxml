@@ -25,4 +25,8 @@
   <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button> 
  </view> 
  </view> 
+
+ <!--出品-->
+ <view class="logo"> <text>—— 智能控制技术室出品 ——</text></view>
+  
 </view>

@@ -4,7 +4,8 @@ Page({
   data: {
       date:util.formatTime(new Date()),
       IDnum:'',
-      time:''
+      time:'',
+      hiddenLoading: true
   },
   onLoad: function (option) {
     // 调用函数时，传入new Date()参数，返回值是日期和时间
@@ -27,9 +28,13 @@ Page({
     this.data.time=e.detail.value
   },
   query: function () {
+    let that = this;
     wx.navigateTo({
-    url: '../../pages/result/result?IDnum='+this.data.IDnum+'&time='+this.data.time, //要跳转到的页面路径
-})
-  }
+     url: '../../pages/result/result?IDnum='+this.data.IDnum+'&time='+this.data.time, //要跳转到的页面路径
+    })
+    that.setData({
+      hiddenLoading: !this.data.hiddenLoading
+     })
+     } 
 }
 )
