@@ -1,14 +1,14 @@
 <view class="result-container">
   <view class="result-box1">
     <label class="resultlab">基本信息</label>
-    <view><text>姓名 </text> <text class="text2">1211211{{name}} </text> </view>   
-    <view><text>部门名称 </text> <text class="text2">12{{department}} </text> </view>
-    <view><text>岗位名称 </text> <text class="text2">424234{{post}} </text> </view>
-    <view><text>银行账号 </text> <text class="text2">423523{{account}} </text> </view>
+    <view><text>姓名 </text> <text class="text2">{{username}} </text> </view>   
+    <view><text>部门名称 </text> <text class="text2">{{department}} </text> </view>
+    <view><text>岗位名称 </text> <text class="text2">{{post}} </text> </view>
+    <view><text>银行账号 </text> <text class="text2">{{account}} </text> </view>
   </view>
   <view class="result-box2">
-    <view class="money">365478{{after_tax}}</view>
-    <text>实发工资 2020-11 {{time}} </text>
+    <view class="money">{{after_tax}}</view>
+    <text>实发工资（元）{{time}} </text>
   </view>
   <view class="result-box3">
     <label class="resultlab">工资明细</label>

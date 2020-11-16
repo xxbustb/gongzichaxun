@@ -79,38 +79,55 @@ Page({
   }
   */
   login: function (options) {
-    const db = wx.cloud.database()
-    console.log(this.data.username)
-    console.log(this.data.password)
+    
+    //console.log(this.data.username)
+    //console.log(this.data.password)
     var name=this.data.username
     var password=this.data.password
      // 查询当前用户所有的 counters
-    const result=db.collection('usernameAndPassword').where(
-      {
-        IDnum:name
-      }
-    ).get({
-      success: function(res) {
-        // res.data 包含该记录的数据
-        console.log(res.data[0])
-        if(res.data[0].password==password){
-          wx.navigateTo({
-            url: '../../pages/time/time',//要跳转到的页面路径
-    })
-        }else{
+    if(this.data.username.length == 0 || this.data.password.length == 0){
+      wx.showToast({
+        title: '账号或密码不能为空',
+        icon: 'none',
+        duration: 2000
+      })
+    }else{
+      //console.log(this.data.username.slice(2))
+      const db = wx.cloud.database()
+      const result=db.collection('usernameAndPassword').where(
+        {
+          IDnum:name
+        }
+      ).get({
+        success: function(res) {
+          // res.data 包含该记录的数据
+          //console.log(res.data.length)
+          console.log(res.data)
+          if(res.data.length==0){
+            wx.showToast({
+              icon: 'none',
+              title: '账号错误'
+            })
+          }
+          if(res.data[0].password==password){
+            wx.navigateTo({
+              url: '../../pages/time/time?IDnum='+name,//要跳转到的页面路径
+      })
+          }else{
+            wx.showToast({
+              icon: 'none',
+              title: '密码错误'
+            })
+          }
+        },fail: function(){
           wx.showToast({
             icon: 'none',
-            title: '密码错误'
+            title: '账号错误'
           })
         }
-      },fail: err => {
-        wx.showToast({
-          icon: 'none',
-          title: '账号错误'
-        })
-        console.error('[数据库] [查询记录] 失败：', err)
-      }
-    })
+      })
+    }
+    
     
       
  }
