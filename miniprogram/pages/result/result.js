@@ -97,6 +97,9 @@ Page({
           icon: 'none',
           title: '查询错误'
         })
+        wx.navigateTo({
+          url: '../../pages/time/time' //要跳转到的页面路径
+      })
       }
     }
   )

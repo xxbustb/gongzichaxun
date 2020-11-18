@@ -28,13 +28,45 @@ Page({
     this.data.time=e.detail.value
   },
   query: function () {
+    var IDnum=this.data.IDnum
+    var time=this.data.time
+    var hiddenLoading=this.data.hiddenLoading
+    var that=this
+    const db = wx.cloud.database()
+    const result=db.collection(time).where(
+      {
+        IDnum:"'"+IDnum
+      }
+    ).get(
+      {
+        success: function(res) {
+            if(res.data.length==0){
+              wx.showToast({
+                icon: 'none',
+                title: '无记录'
+              })
+            }else{ 
+            that.setData({
+              hiddenLoading:!hiddenLoading
+            })
+            wx.navigateTo({
+                url: '../../pages/result/result?IDnum='+IDnum+'&time='+time, //要跳转到的页面路径
+            })
+          }
+        },fail: function(){
+          wx.showToast({
+            icon: 'none',
+            title: '查询失败'
+          })
+        }
+      }
+    )
+  },
+  onShow: function () {
     let that = this;
-    wx.navigateTo({
-     url: '../../pages/result/result?IDnum='+this.data.IDnum+'&time='+this.data.time, //要跳转到的页面路径
-    })
     that.setData({
-      hiddenLoading: !this.data.hiddenLoading
-     })
-     } 
+      hiddenLoading:true
+    })
+  }
 }
 )

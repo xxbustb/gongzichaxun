@@ -59,13 +59,7 @@ page{
  .line { 
   margin-top: 15px; 
  } 
-  
- .line0 { 
 
-  height: 1px; 
-  background-color: #cccccc
- }  
-  
  /*按钮*/
  .loginBtnView { 
   width: 100%; 
@@ -81,6 +75,15 @@ page{
   margin-top: 40px; 
   border-radius:10px;
  }
+
+   
+ /*忘记密码*/
+ .forgetBtn { 
+  color: #979494; 
+  font-size: 14px;
+  font-weight: lighter
+ }
+
 
  .logo>text{
   display: block;

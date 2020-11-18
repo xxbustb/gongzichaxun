@@ -8,10 +8,12 @@
   </view>
   <view class="result-box2">
     <view class="money">{{after_tax}}</view>
-    <text>实发工资（元）{{time}} </text>
+    <text>实发工资(元) {{time}}</text>
   </view>
   <view class="result-box3">
-    <label class="resultlab">工资明细</label>
+  <label class="resultlab">工资明细</label>
+  <view class="result-box33">
+  <view class="result-box3-1">
     <view><text>岗位工资 </text> <text class="text2">{{post_wage}} </text></view>
     <view><text>保密津贴 </text> <text class="text2">{{secrecy}} </text></view>
     <view><text>提租补贴 </text> <text class="text2">{{rate}} </text></view>
@@ -28,7 +30,9 @@
     <view><text>生育津贴 </text> <text class="text2">{{maternity}} </text></view>
     <view><text>独生子女 </text> <text class="text2">{{one_child}} </text></view>
     <view><text>住房补贴 </text> <text class="text2">{{housing}} </text></view>
-    <view><text>应发工资 </text> <text class="text2">{{before_tax}} </text></view>
+    <view><text>应发工资 </text> <text class="text3">{{before_tax}} </text></view>
+  </view>
+  <view class="result-box3-2">
     <view><text>养老保险 </text> <text class="text2">{{endowment_insurance}} </text></view>
     <view><text>医疗保险 </text> <text class="text2">{{medical_insurance}} </text></view>
     <view><text>公积金 </text> <text class="text2">{{accumulation_fund}} </text></view>
@@ -39,6 +43,8 @@
     <view><text>大额医疗 </text> <text class="text2">{{large_medical}} </text></view>
     <view><text>宿舍房租 </text> <text class="text2">{{dormitory}} </text></view>
     <view><text>企业年金 </text> <text class="text2">{{supplementary_pension}} </text></view>
-    <view><text>实发工资 </text> <text class="text2">{{after_tax}} </text></view>
+    <view><text>扣除总计 </text> <text class="text3">{{kouchu}} </text></view>
+  </view>
+</view>
   </view>
 </view>
