@@ -23,12 +23,7 @@ page{
   font-size: 14px;
   color: #8d8787; 
 }
-.text3{
-  float: right; 
-  text-align: right; 
-  font-size: 16px;
-  color: #db6131; 
-}
+
 .result-box1>text{
   font-size: 14px;
   color: #000000; 
@@ -40,7 +35,7 @@ page{
   color: #6e6767;
 }
 .money{
-  font-size: 26px;
+  font-size: 30px;
   text-align: center;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -62,5 +57,17 @@ page{
 }
 .result-box3-2{
   width: 50%;
-  margin-left: 4px;
+  margin-left: 15px;
+ }
+ .text3{
+  display: block;
+  text-align: center; 
+  font-size: 16px;
+  color: #db6131; 
+}
+ .text4{
+  display: block;
+  text-align: center; 
+  font-size: 16px;
+  border-top: 1px rgb(199, 195, 195) solid
 }

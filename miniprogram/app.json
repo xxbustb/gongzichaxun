@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/change_password/change_password",
     "pages/login/login",
     "pages/time/time",
-    "pages/result/result" 
+    "pages/result/result"
+
   
   ],
   "window": {

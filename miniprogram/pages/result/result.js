@@ -36,7 +36,8 @@ Page({
     tenement: "",
     traffic: "",
     unemployment_insurance: "",
-    time:""
+    time:"",
+    kouchu:""
   },
 
   /**
@@ -56,6 +57,8 @@ Page({
           // res.data 包含该记录的数据
           console.log(res.data.length)
           console.log(res.data[0].name)
+          var kouchu = res.data[0].endowment_insurance + res.data[0].medical_insurance
+          var kouchu=kouchu.toFixed(2)
           that.setData({
           after_tax:res.data[0].after_tax,
           accumulation_fund:res.data[0].accumulation_fund,
@@ -90,7 +93,8 @@ Page({
           tenement:res.data[0].tenement,
           traffic:res.data[0].traffic,
           unemployment_insurance:res.data[0].unemployment_insurance,
-          time:options.time
+          time:options.time,
+          kouchu: kouchu
           })
       },fail: function(){
         wx.showToast({
