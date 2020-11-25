@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/change_password/change_password",
     "pages/login/login",
     "pages/time/time",
-    "pages/result/result"
-
-  
+    "pages/mine/mine",
+    "pages/result/result",
+    "pages/information/information", 
+    "pages/change_password/change_password"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

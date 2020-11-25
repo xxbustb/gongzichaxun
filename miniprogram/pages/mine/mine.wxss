@@ -1,0 +1,44 @@
+/* miniprogram/pages/mine/mine.wxss */
+
+.avatar-icon{  
+  flex: 1; 
+ } 
+ .avatar-img{ 
+  width: 760rpx;
+ } 
+.list-wrapper{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.lists{
+  font-size: 18px;
+}
+.listimg image {
+  margin-right: 5px; 
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+ 
+.content{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 
+/*分割线样式*/
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+ 
+.arrows image {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-left: 480rpx;
+}
+ 
+/* user.wxss */

@@ -84,7 +84,15 @@ Page({
         }
       })
     }   
- }
+ },
+
+ forget:function(){
+  wx.showModal({
+      title: '提示',
+      showCancel: false,
+      content: '请联系管理员修改密码！',
+  })
+}
  
 })
  

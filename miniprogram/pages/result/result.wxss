@@ -3,7 +3,7 @@ page{
   background-color: #fafafa;
  }
 .result-container{
-  padding: 0 5%;
+  padding: 5% 5%;
   height: 100%;
 }
 .result-box1, .result-box2, .result-box3{
@@ -14,7 +14,7 @@ page{
   box-shadow: 0 2px 2px #888888;
 }
 .resultlab{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 .text2{
@@ -43,14 +43,14 @@ page{
   color: #e24949; 
 }
 .result-box3>view{
-  margin-top: 2%;
+  margin-top: 3%;
 }
 .result-box3>text{
   font-size: 14px;
   color: #000000; 
 } 
 .result-box33{
-  display: flex; 
+  display: flex;
 }
 .result-box3-1{
   width: 50%;
@@ -58,6 +58,12 @@ page{
 .result-box3-2{
   width: 50%;
   margin-left: 15px;
+ }
+ .result-box3-1>view{
+  margin-top: 8px;
+ }
+ .result-box3-2>view{
+  margin-top: 8px;
  }
  .text3{
   display: block;
@@ -69,5 +75,6 @@ page{
   display: block;
   text-align: center; 
   font-size: 16px;
+  padding-top: 5%;
   border-top: 1px rgb(199, 195, 195) solid
 }

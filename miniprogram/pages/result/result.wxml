@@ -1,11 +1,4 @@
 <view class="result-container">
-  <view class="result-box1">
-    <label class="resultlab">基本信息</label>
-    <view><text>姓名 </text> <text class="text2">{{username}} </text> </view>   
-    <view><text>部门名称 </text> <text class="text2">{{department}} </text> </view>
-    <view><text>岗位名称 </text> <text class="text2">{{post}} </text> </view>
-    <view><text>银行账号 </text> <text class="text2">{{account}} </text> </view>
-  </view>
   <view class="result-box2">
     <view class="money">{{after_tax}}</view>
     <text>实发工资(元) {{time}}</text>

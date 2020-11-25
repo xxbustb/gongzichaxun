@@ -10,6 +10,7 @@
    <loading hidden="{{hiddenLoading}}">加载中... </loading>
  </view> 
  </view> 
+<tabBar></tabBar>
 
 
 

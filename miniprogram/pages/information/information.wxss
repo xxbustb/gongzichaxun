@@ -1,0 +1,42 @@
+/* pages/information/information.wxss */
+page{
+  height: 100%;    /* 使用page的height可以使页面占全屏 */
+  background-color: #fafafa;
+ }
+.information-container{
+  padding: 0 5%;
+  height: 100%;
+}
+.label{
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-bottom: 40rpx;
+}
+.information-box1{
+  padding: 5% 5%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px #888888;
+}
+/*.informationlab{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}*/
+
+.information-box1>view{
+  margin-top: 3%;
+}
+.information-box1>view>text{
+  font-size: 18px;
+  color: #000000; 
+}
+.text2{
+  float: right; 
+  text-align: right; 
+  font-size: 16px;
+  color: #8d8787; 
+}
+

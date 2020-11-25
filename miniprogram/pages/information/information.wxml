@@ -1,0 +1,12 @@
+<!--pages/information/information.wxml-->
+<view class="information-container">
+  <view class="label"><label>基本信息</label></view>
+  <view class="information-box1">
+    <view><text>姓名 </text> <text class="text2">{{username}} </text> </view>  
+    <view><text>身份证号 </text> <text class="text2">{{IDnum}} </text> </view>  
+    <view><text>部门名称 </text> <text class="text2">{{department}} </text> </view>
+    <view><text>岗位名称 </text> <text class="text2">{{post}} </text> </view>
+    <view><text>银行账号 </text> <text class="text2">{{account}} </text> </view>
+  </view>
+</view>
+
